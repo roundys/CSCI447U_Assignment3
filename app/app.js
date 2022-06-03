@@ -95,10 +95,7 @@ app.all('*', function(req, res) {
   res.redirect("/post/about");
 });
 
-const server = https.createServer({
-	key: fs.readFileSync('server.key'),
-	cert: fs.readFileSync('server.cert')
-}, app).listen(port,() => {
+app.listen(port,() => {
 console.log('Listening ...Server started on port ' + port);
 })
 
